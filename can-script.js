@@ -14,13 +14,14 @@ var products;
 //     console.log('Network request for products.json failed with response ' + response.status + ': ' + response.statusText);
 //   }
 // });
-
+console.log('starting')
 const request = new XMLHttpRequest ();
 request.open('GET','products.json');
 request.responseType = 'json';
 request.onload = function(){
   if (request.status == 200){ //response ok
     products = request.response;
+    console.log(products)
     initialize();
   } else {
     console.log('Network request for products.json failed with response ' + request.status + ': ' + request.statusText);
