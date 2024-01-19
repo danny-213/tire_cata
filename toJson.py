@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 
-df = pd.read_excel('MBVCO102023_Product list.xlsx')
+df = pd.read_excel('../tire_data/MBVCO102023_Product list.xlsx')
 print(df.head())
 
 df_dict = df.to_dict('records')
